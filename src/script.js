@@ -10,6 +10,7 @@ if (retString) {
 let taskInput = document.querySelector("#todo-task");
 const taskbutton = document.querySelector("#todo-button");
 const taskDisplay = document.querySelector("#task-display");
+const taskDoneDisplay = document.querySelector("#completed");
 
 // Logik för att lägga till task
 const addTask = (e) => {
@@ -22,7 +23,7 @@ const addTask = (e) => {
   //Om index inte är 0, så läggs det tasken
   //man tryckt edit på i input-field
   if (indexForBtn !== null) {
-    tasks.name[indexForBtn] = inputValue;
+    tasks[indexForBtn].name = inputValue;
     indexForBtn = null;
   } else {
     //annars pushar man in input i arrayen
@@ -42,36 +43,54 @@ taskbutton.addEventListener("click", addTask);
 
 const renderTask = () => {
   taskDisplay.innerHTML = "";
-  //Foreach istället för vanlig loop.
+  taskDoneDisplay.innerHTML = ""; 
+
   tasks.forEach((task, i) => {
     let liElement = document.createElement("li");
     let liEdit = document.createElement("button");
     let liDelete = document.createElement("button");
+    let liCompleted = document.createElement("button");
 
-    // Use textContent to add text without overwriting the buttons
     liElement.textContent = task.name;
-
     liEdit.innerText = "Edit";
     liDelete.innerText = "Delete";
+    liCompleted.innerText = "Klar";
 
-    liElement.appendChild(liEdit);
-    liElement.appendChild(liDelete);
-    taskDisplay.appendChild(liElement);
+    
+    const liClone = liElement.cloneNode(true);
 
+    if (task.isDone) {
+      // Append to the completed tasks display
+      liClone.appendChild(liDelete);
+      taskDoneDisplay.appendChild(liClone);
+    } else {
+      
+      liElement.appendChild(liEdit);
+      liElement.appendChild(liDelete);
+      liElement.appendChild(liCompleted);
+      taskDisplay.appendChild(liElement);
+    }
+
+    
     liEdit.addEventListener("click", () => {
       taskInput.value = task.name;
       indexForBtn = i;
     });
 
+    
+    liCompleted.addEventListener("click", () => {
+      task.isDone = true;
+      localStorage.setItem("key", JSON.stringify(tasks));
+      renderTask();
+    });
+
+    // Delete button functionality
     liDelete.addEventListener("click", () => {
       tasks.splice(i, 1);
-      //Sparar i localstorage precis när man tagit bort nåt.
-      //Renderar sidan om igen
       localStorage.setItem("key", JSON.stringify(tasks));
       renderTask();
     });
   });
 };
-renderTask();
-// console.table(tasks)
-// console.log(tasks[0].isDone);
+
+console.table(tasks);
