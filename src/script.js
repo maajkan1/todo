@@ -92,5 +92,5 @@ const renderTask = () => {
     });
   });
 };
-
 console.table(tasks);
+renderTask();
