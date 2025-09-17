@@ -4,20 +4,20 @@
 ***
 
 ### Features :cake:
-    [x] - Lägga till task  
-    [x] - Edit task  
-    [x] - Delete task  
-    [x] - Radera task  
-    [x] - Visa slutförda task i separat sida  
-    [x] - LocalStorea alla task
+- [x]    Lägga till task  
+- [x]    Edit task  
+- [x]    Delete task  
+- [x]    Radera task  
+- [x]    Visa slutförda task i separat sida  
+- [x]    LocalStorea alla task
 
 ### Upcoming :star2:
 
-    [ ] - Snygg design (eller?)
-    [ ] - Lära sig cookies, vad är det ens?
-    [ ] - Optimera koden deluxe
+- [x]     Snygg design (eller?)
+- [x]     Lära sig cookies, vad är det ens?
+- [x]     Optimera koden deluxe
 
 ### Final product
 
-    [ ] - Göra om hela appen i Vue
+- [x]    Göra om hela appen i Vue
 
