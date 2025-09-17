@@ -14,10 +14,10 @@
 ### Upcoming :star2:
 
     [ ] - Snygg design (eller?)
-    [ ] - Lära sig cookies, vad är det ens?     :cop:
+    [ ] - Lära sig cookies, vad är det ens?
     [ ] - Optimera koden deluxe
 
 ### Final product
 
-    [ ] - Göra om hela appen i Vue      :metal:
+    [ ] - Göra om hela appen i Vue
 
