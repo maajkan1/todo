@@ -13,11 +13,11 @@
 
 ### Upcoming :star2:
 
-- [x]     Snygg design (eller?)
-- [x]     Lära sig cookies, vad är det ens?
-- [x]     Optimera koden deluxe
+- []     Snygg design (eller?)
+- []     Lära sig cookies, vad är det ens?
+- []     Optimera koden deluxe
 
 ### Final product
 
-- [x]    Göra om hela appen i Vue
+- []    Göra om hela appen i Vue
 
