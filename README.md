@@ -1,6 +1,6 @@
 # TODO APP
 
-### En (hyfsat :laugh:) fungerande TODO-app
+### En (hyfsat :smile: ) fungerande TODO-app
 ***
 
 ### Features :cake:
@@ -11,13 +11,13 @@
     [x] - Visa slutförda task i separat sida  
     [x] - LocalStorea alla task
 
-### Upcoming :shades:
+### Upcoming :star2:
 
     [ ] - Snygg design (eller?)
-    [ ] - Lära sig cookies, vad är det ens?
+    [ ] - Lära sig cookies, vad är det ens? :cop:
     [ ] - Optimera koden deluxe
 
 ### Final product
 
-    [ ] - Göra om hela appen i Vue :shades:
+    [ ] - Göra om hela appen i Vue :metal:
 
